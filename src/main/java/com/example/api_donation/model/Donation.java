@@ -11,6 +11,7 @@ public class Donation {
     private Long id;
     private String nome;
     private String categoria;
-    private
+    private int quantidade;
+    private String dataValidade; // opcional
 
 }
