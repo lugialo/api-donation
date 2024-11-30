@@ -1,15 +1,10 @@
-package com.example.api_volunteer.model;
+package com.example.api_volunteer.dto;
 
-import jakarta.persistence.*;
 import lombok.Data;
 
-@Entity
 @Data
-public class VolunteerModel {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class VolunteerDTO {
     private Long id;
-
     private String nome;
     private String email;
     private String telefone;

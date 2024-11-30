@@ -1,16 +1,10 @@
-package com.example.api_shelter.model;
+package com.example.api_shelter.dto;
 
-import jakarta.persistence.*;
 import lombok.Data;
 
-@Entity
 @Data
-public class ShelterModel {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ShelterDTO {
     private Long id;
-
     private String nome;
     private String endereco;
     private String telefone;
