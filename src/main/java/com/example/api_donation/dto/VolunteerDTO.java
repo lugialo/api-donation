@@ -1,4 +1,4 @@
-package com.example.api_volunteer.dto;
+package com.example.api_donation.dto;
 
 import lombok.Data;
 

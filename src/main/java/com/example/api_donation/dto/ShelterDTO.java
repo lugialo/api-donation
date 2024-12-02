@@ -1,4 +1,4 @@
-package com.example.api_shelter.dto;
+package com.example.api_donation.dto;
 
 import lombok.Data;
 

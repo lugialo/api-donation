@@ -1,7 +1,7 @@
-package com.example.api_volunteer.mapper;
+package com.example.api_donation.mapper;
 
-import com.example.api_volunteer.dto.VolunteerDTO;
-import com.example.api_volunteer.model.VolunteerModel;
+import com.example.api_donation.dto.VolunteerDTO;
+import com.example.api_donation.model.VolunteerModel;
 import org.springframework.stereotype.Component;
 
 @Component

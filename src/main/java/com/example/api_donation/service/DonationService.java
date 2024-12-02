@@ -49,10 +49,21 @@ public class DonationService {
         DonationModel existente = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Donativo não encontrado."));
 
-        existente.setNome(dto.getNome());
-        existente.setCategoria(dto.getCategoria());
-        existente.setQuantidade(dto.getQuantidade());
-        existente.setDataValidade(dto.getDataValidade());
+        if (dto.getNome() != null) {
+            existente.setNome(dto.getNome());
+        }
+        if (dto.getCategoria() != null) {
+            existente.setCategoria(dto.getCategoria());
+        }
+        if (dto.getQuantidade() != 0) {
+            if (dto.getQuantidade() < 0) {
+                throw new IllegalArgumentException("Quantidade não pode ser negativa.");
+            }
+            existente.setQuantidade(dto.getQuantidade());
+        }
+        if (dto.getDataValidade() != null) {
+            existente.setDataValidade(dto.getDataValidade());
+        }
 
         return mapper.toDTO(repository.save(existente));
     }

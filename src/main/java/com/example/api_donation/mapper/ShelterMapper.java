@@ -1,7 +1,7 @@
-package com.example.api_shelter.mapper;
+package com.example.api_donation.mapper;
 
-import com.example.api_shelter.dto.ShelterDTO;
-import com.example.api_shelter.model.ShelterModel;
+import com.example.api_donation.dto.ShelterDTO;
+import com.example.api_donation.model.ShelterModel;
 import org.springframework.stereotype.Component;
 
 @Component

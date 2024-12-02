@@ -1,10 +1,14 @@
 package com.example.api_donation.service;
 
 import com.example.api_donation.dto.DonationDTO;
+import com.example.api_donation.dto.VolunteerDTO;
 import com.example.api_donation.exception.ResourceNotFoundException;
 import com.example.api_donation.mapper.DonationMapper;
+import com.example.api_donation.mapper.VolunteerMapper;
 import com.example.api_donation.model.DonationModel;
+import com.example.api_donation.model.VolunteerModel;
 import com.example.api_donation.repository.DonationRepository;
+import com.example.api_donation.repository.VolunteerRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

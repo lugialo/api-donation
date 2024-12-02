@@ -1,4 +1,4 @@
-package com.example.api_volunteer.model;
+package com.example.api_donation.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

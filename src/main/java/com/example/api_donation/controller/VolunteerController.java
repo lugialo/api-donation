@@ -1,7 +1,7 @@
-package com.example.api_volunteer.controller;
+package com.example.api_donation.controller;
 
-import com.example.api_volunteer.dto.VolunteerDTO;
-import com.example.api_volunteer.service.VolunteerService;
+import com.example.api_donation.dto.VolunteerDTO;
+import com.example.api_donation.service.VolunteerService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -39,7 +39,7 @@ public class VolunteerController {
     @PutMapping("/{id}")
     public ResponseEntity<VolunteerDTO> update(@PathVariable Long id, @Valid @RequestBody VolunteerDTO dto) {
         VolunteerDTO updatedVolunteer = service.update(id, dto);
-        return ResponseEntity.ok(updatedVolunteer);
+        return ResponseEntity.ok(service.update(id, dto));
     }
 
     @DeleteMapping("/{id}")

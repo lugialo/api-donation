@@ -1,10 +1,10 @@
-package com.example.api_shelter.service;
+package com.example.api_donation.service;
 
-import com.example.api_shelter.dto.ShelterDTO;
-import com.example.api_shelter.exception.ResourceNotFoundException;
-import com.example.api_shelter.mapper.ShelterMapper;
-import com.example.api_shelter.model.ShelterModel;
-import com.example.api_shelter.repository.ShelterRepository;
+import com.example.api_donation.dto.ShelterDTO;
+import com.example.api_donation.exception.ResourceNotFoundException;
+import com.example.api_donation.mapper.ShelterMapper;
+import com.example.api_donation.model.ShelterModel;
+import com.example.api_donation.repository.ShelterRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -49,18 +49,25 @@ public class ShelterService {
         ShelterModel existente = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Abrigo não encontrado."));
 
-        existente.setNome(dto.getNome());
-        existente.setEndereco(dto.getEndereco());
-        existente.setTelefone(dto.getTelefone());
-        existente.setCapacidade(dto.getCapacidade());
-        existente.setOcupacaoAtual(dto.getOcupacaoAtual());
-
-        if (existente.getOcupacaoAtual() > existente.getCapacidade()) {
-            throw new IllegalArgumentException("A ocupação atual não pode exceder a capacidade.");
+        if (dto.getNome() != null) {
+            existente.setNome(dto.getNome());
+        }
+        if (dto.getEndereco() != null) {
+            existente.setEndereco(dto.getEndereco());
+        }
+        if (dto.getCapacidade() != null) {
+            if (dto.getCapacidade() < 0) {
+                throw new IllegalArgumentException("Capacidade não pode ser negativa.");
+            }
+            existente.setCapacidade(dto.getCapacidade());
+        }
+        if (dto.getTelefone() != null) {
+            existente.setTelefone(dto.getTelefone());
         }
 
         return mapper.toDTO(repository.save(existente));
     }
+
 
     public void delete(Long id) {
         if (!repository.existsById(id)) {
