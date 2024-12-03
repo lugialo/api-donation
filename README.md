@@ -24,6 +24,7 @@ docker compose up -d
 ```
 
 Também é possível acessar a API hospeadada através do link:
+https://api-donation-production.up.railway.app/
 
 ---
 
