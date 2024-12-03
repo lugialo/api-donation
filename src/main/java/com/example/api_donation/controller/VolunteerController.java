@@ -36,9 +36,8 @@ public class VolunteerController {
         return ResponseEntity.ok(savedVolunteer);
     }
 
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     public ResponseEntity<VolunteerDTO> update(@PathVariable Long id, @Valid @RequestBody VolunteerDTO dto) {
-        VolunteerDTO updatedVolunteer = service.update(id, dto);
         return ResponseEntity.ok(service.update(id, dto));
     }
 

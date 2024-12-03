@@ -50,12 +50,21 @@ public class VolunteerService {
         VolunteerModel existente = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Voluntário não encontrado."));
 
-        existente.setNome(dto.getNome());
-        existente.setEmail(dto.getEmail());
-        existente.setTelefone(dto.getTelefone());
-        existente.setHabilidade(dto.getHabilidade());
-        existente.setDisponibilidade(dto.getDisponibilidade());
-
+        if (dto.getNome() != null) {
+            existente.setNome(dto.getNome());
+        }
+        if (dto.getEmail() != null) {
+            existente.setEmail(dto.getEmail());
+        }
+        if (dto.getTelefone() != null) {
+            existente.setTelefone(dto.getTelefone());
+        }
+        if (dto.getHabilidade() != null) {
+            existente.setHabilidade(dto.getHabilidade());
+        }
+        if (dto.getDisponibilidade() != null) {
+            existente.setDisponibilidade(dto.getDisponibilidade());
+        }
         return mapper.toDTO(repository.save(existente));
     }
 
