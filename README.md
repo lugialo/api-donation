@@ -1,6 +1,6 @@
 # API-DONATION
 
-API-DONATION é uma aplicação Spring Boot para gerenciar doações, voluntários e abrigos. A aplicação permite criar, listar, atualizar e deletar doações, abrigos e voluntários.
+API-DONATION é uma aplicação Spring Boot para gerenciar doações. A aplicação permite criar, listar, atualizar e deletar doações, abrigos e voluntários.
 
 ## 📋 Funcionalidades
 
