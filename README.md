@@ -31,7 +31,7 @@ Outras rotas semelhantes estão disponíveis para entidades relacionadas como vo
   "dataValidade": "2024-12-31"
 }
 
-**Resposta**
+Resposta
 {
   "id": 1,
   "nome": "Roupas",
@@ -39,6 +39,7 @@ Outras rotas semelhantes estão disponíveis para entidades relacionadas como vo
   "quantidade": 10,
   "dataValidade": "2024-12-31"
 }
+```
 
 ## 🧪 Testando com Swagger
 
@@ -56,6 +57,7 @@ Esta API utiliza o Swagger para documentação interativa.
 O projeto segue uma arquitetura em camadas, dividindo responsabilidades de maneira clara:
 
 ### Camadas principais
+
 - **Controller:** Responsável por lidar com as requisições HTTP e retornar as respostas apropriadas. Exemplos:
   - `DonationController`
   - `VolunteerController`
@@ -82,5 +84,3 @@ O projeto segue uma arquitetura em camadas, dividindo responsabilidades de manei
   - `ShelterDTO` e `ShelterMapper`
 
 A estrutura garante modularidade, reutilização de código e facilidade de manutenção.
-
-
