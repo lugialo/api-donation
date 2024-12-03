@@ -41,17 +41,6 @@ Resposta
 }
 ```
 
-## 🧪 Testando com Swagger
-
-Esta API utiliza o Swagger para documentação interativa.
-
-1. Após iniciar o projeto, acesse o Swagger UI:
-   - **URL:** `http://localhost:8080/swagger-ui.html`
-
-2. Explore e teste todas as rotas diretamente na interface Swagger, onde é possível visualizar a documentação completa e realizar chamadas às APIs com diferentes parâmetros.
-
----
-
 ## 📄 Estrutura do Projeto
 
 O projeto segue uma arquitetura em camadas, dividindo responsabilidades de maneira clara:
